@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+void factorielle(int n) {
+    if (n == 0 ||n == 1 ) {
+         return 1;
+
+
+} else {
+        return n* factorielle  (n - 1); 
+    }
+}
+
+int main() {
+    int nmbr;
+    
+    printf("entrez un entier positif: ");
+    scanf("%d", &nmbr);
+
+    if (nmbr < 0) {
+        printf("la factorielle n'est pas les entiers negatifs\n");
+        } else {
+        printf("la factorielle de %d est %llu\n", nombre, factorielle(nmbr));
+     }
+
+    return 0;
+}

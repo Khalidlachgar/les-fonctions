@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+int fibonacci(int n) {
+    if ( n == 0) {
+         return 0; 
+    } else if (n ==  1) {
+        return 1; 
+       } else {
+        return fibonacci(n - 1)   + fibonacci(n - 2); 
+    }
+}
+
+int main() {
+    int term;
+
+    printf("Entrez un entier positif pour  le terme de fibonacci: ");
+    scanf("%d", &term);
+
+    if (term < 0) {
+        printf("veuillez entrer un entier positif.\n");
+    } else {
+        printf("Le %d-eme terme de la suite de Fibonacci est %d.\n", term, fibonacci(term));
+    }
+
+    return 0;
+}
